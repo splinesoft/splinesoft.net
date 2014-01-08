@@ -1,0 +1,25 @@
+markdown: rdiscount
+permalink: /:title
+title: splinesoft
+url: http://www.splinesoft.net
+images: /img/
+css: /css/
+js: /js/
+pygments: 
+  lexer: objective-c
+  
+description: Splinesoft - mindful bits for your iPhone and iPad.
+
+exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, publish.sh]
+
+parent:
+  name: splinesoft.net
+  url: http://www.splinesoft.net
+
+author:
+  name: Jonathan Hersh
+  email: admin@splinesoft.net
+  twitter: https://twitter.com/splinesoft
+
+meta:
+  source: https://github.com/splinesoft/splinesoft.net

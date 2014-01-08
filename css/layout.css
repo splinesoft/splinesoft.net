@@ -1,0 +1,119 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+#header {
+	border-bottom: 1px solid #242424;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+}
+
+#header h1 {
+	font-family: "Futura";
+	font-size: 32px;
+	font-weight: normal;
+	margin: 1px 0;
+}
+
+#header h1 a {
+    color: #fff;
+}
+
+#header h1 a:hover {
+    color: #888;
+}
+
+#header-image img {
+	margin: 10px 0 3px;
+}
+
+#footer {
+    margin-top: 20px;
+	border-top: 1px solid #242424;
+	border-bottom: 1px solid #242424;
+	padding-top: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-family: "Futura";
+}
+
+#site-line {
+    color: gray;
+    font-size: 16px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica;
+    font-weight: bold;
+}
+
+.nav {
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+
+/* #Page Styles
+================================================== */
+
+span.lead {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+a.appstore {
+    background-image: url( "/img/app-store-button-blue.png" );
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: block;
+    width: 250px;
+    height: 89px;
+}
+
+a.appstore:hover {
+    background-image: url( "/img/app-store-button-blue-hover.png" );
+}
+
+
+.rampics img {
+    -webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+}
+
+.mudtext {
+    font-family: Courier;
+    color: white;
+}
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}

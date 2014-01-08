@@ -1,0 +1,19 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="{{ site.js }}jquery.cycle.lite.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#slideshow').cycle({
+		fx: 'fade',
+		timeout: 5000,
+	});
+});
+</script>
+
+<div class="twelve columns clearfix">
+    <div id="slideshow" style="text-alignment:center; min-height: 485px;">
+      <a href="/mudrammer/"><img src="{{ site.images }}mud1.png" width="320" height="480" /></a>
+      <a href="/mudrammer/"><img src="{{ site.images }}mud2.png" width="320" height="480" /></a>
+      <a href="/mudrammer/"><img src="{{ site.images }}mud3.png" width="320" height="480" /></a>
+      <a href="/mudrammer/"><img src="{{ site.images }}mud4.png" width="320" height="480" /></a>
+    </div>
+</div>

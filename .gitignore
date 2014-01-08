@@ -1,0 +1,6 @@
+_drafts/
+.DS_Store
+*.swp
+
+# ignore generated local site
+_site/
