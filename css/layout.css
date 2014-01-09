@@ -43,10 +43,12 @@
 }
 
 #footer {
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 	border-top: 1px solid #242424;
 	border-bottom: 1px solid #242424;
-	padding-top: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	text-align: center;
 	font-weight: bold;
 	font-family: "Futura";
