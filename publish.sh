@@ -2,6 +2,7 @@
 
 SITE="s3://splinesoft.net/"
 
+bundle install
 bundle exec jekyll build --config _config.yml
 
 find _site/ -iname '*.html' -exec gzip -n --best {} +
