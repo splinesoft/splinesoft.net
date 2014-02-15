@@ -5,6 +5,7 @@ url: http://www.splinesoft.net
 images: /img/
 css: /css/
 js: /js/
+
 pygments: 
   lexer: objective-c
   
@@ -23,3 +24,8 @@ author:
 
 meta:
   source: https://github.com/splinesoft/splinesoft.net
+
+rammer:
+  kb: https://splinesoft.uservoice.com/knowledgebase
+  ideas: https://splinesoft.uservoice.com/forums/239975-mudrammer-a-modern-mud-client-for-iphone-and-ipa
+  
