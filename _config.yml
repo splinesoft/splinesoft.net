@@ -1,7 +1,7 @@
 markdown: rdiscount
 permalink: /:title
 title: splinesoft
-url: http://www.splinesoft.net
+url: http://splinesoft.net
 images: /img/
 css: /css/
 js: /js/
