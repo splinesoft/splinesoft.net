@@ -3,7 +3,6 @@
 SITE="s3://splinesoft.net/"
 
 bundle install
-
 bundle exec jekyll build --config _config.yml
 bundle exec htmlproof --verbose --favicon ./_site
 
