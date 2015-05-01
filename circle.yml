@@ -1,0 +1,9 @@
+dependencies:
+  pre:
+    - npm install -g write-good
+test:
+  pre:
+    - bundle exec jekyll build --config _config.yml
+  override:
+    - bundle exec htmlproof --check-favicon --check-html --only-4xx _site
+    - write-good _site/*.html || exit 0

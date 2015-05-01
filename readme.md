@@ -1,5 +1,7 @@
 # Splinesoft dot net
 
+[![Circle CI](https://circleci.com/gh/splinesoft/splinesoft.net.svg?style=svg)](https://circleci.com/gh/splinesoft/splinesoft.net)
+
 Source for [Splinesoft.net](http://splinesoft.net), a purveyor of finely-crafted bits for iPhone and iPad.
 
 ### Architecture
