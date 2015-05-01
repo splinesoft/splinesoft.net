@@ -5,9 +5,6 @@ url: http://splinesoft.net
 images: /img/
 css: /css/
 js: /js/
-
-pygments: 
-  lexer: objective-c
   
 description: Splinesoft - mindful bits for your iPhone and iPad.
 
