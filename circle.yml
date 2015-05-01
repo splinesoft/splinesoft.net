@@ -1,8 +1,18 @@
 dependencies:
   pre:
     - npm install -g write-good
+    - sudo apt-get install python-dateutil
+    - wget https://github.com/s3tools/s3cmd/archive/v1.5.0-rc1.tar.gz
+    - tar -xzvf v1.5.0-rc1.tar.gz
+    - cd s3cmd-1.5.0-rc1 && sudo python setup.py install
+    - s3cmd --version
 test:
   pre:
-    - bundle exec jekyll build --config _config.yml
+    - rake build
   override:
-    - write-good _site/*.html || exit 0
+    - rake lint
+deployment:
+  production:
+    branch: master
+    commands:
+      - rake publish
