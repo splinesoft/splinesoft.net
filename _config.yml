@@ -11,7 +11,7 @@ pygments:
   
 description: Splinesoft - mindful bits for your iPhone and iPad.
 
-exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, publish.sh]
+exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, Rakefile]
 
 parent:
   name: splinesoft.net
