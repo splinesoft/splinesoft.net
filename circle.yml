@@ -14,5 +14,6 @@ test:
 deployment:
   production:
     branch: master
+    owner: splinesoft
     commands:
       - rake publish
