@@ -44,7 +44,7 @@ task :publish do
 	
 	# Sync all remaining files
 	
-	sh "s3cmd sync --progress -M --acl-public --recursive "+
+	sh "s3cmd sync --progress -M --acl-public --recursive --no-mime-magic "+
 	"_site/ s3://splinesoft.net/ "+
 	"--exclude '*.*' "+
 	"--include '*.png' --include '*.css' --include '*.js' --include '*.txt' --include '*.gif' --include '*.jpg' --include '*.jpeg' "+
