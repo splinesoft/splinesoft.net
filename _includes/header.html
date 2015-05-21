@@ -40,10 +40,12 @@
     <meta name="apple-itunes-app" content="app-id=597157072"/>
    
     <link rel="shortcut icon" href="{{ site.images }}favicon.png">
-
-    <link rel="stylesheet" href="{{ site.css }}base.css">
-    <link rel="stylesheet" href="{{ site.css }}skeleton.css">
-    <link rel="stylesheet" href="{{ site.css }}layout.css">
+    
+    <style>
+        {% include base.css %}
+        {% include skeleton.css %}
+        {% include layout.css %}
+    </style>
     
     <!--[if lt IE 9]>
     	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
