@@ -21,6 +21,8 @@ task :publish do
 				
 		find _site/ -iname '*.html' -exec gzip -n --best {} +
 		find _site/ -iname '*.xml' -exec gzip -n --best {} +
+		find _site/ -iname '*.css' -exec gzip -n --best {} +
+		find _site/ -iname '*.js' -exec gzip -n --best {} +
 		
 		for f in `find _site/ -iname '*.gz'`; do
 			mv $f ${f%.gz}
@@ -32,9 +34,7 @@ task :publish do
 	if ENV['CIRCLECI'] == 'true'
 			cmd_extra += " --access_key=$SITE_AWS_KEY --secret_key=$SITE_AWS_SECRET"
 	end
-	
-	# Sync GZip'd HTML and XML
-	
+		
 	sh "s3cmd sync -M --progress --acl-public --recursive --no-mime-magic "+
 	"--add-header='Content-Encoding:gzip' "+
 	"_site/ s3://splinesoft.net/ "+
@@ -42,12 +42,19 @@ task :publish do
 	"--include '*.html' --include '*.xml' "+
 	"#{cmd_extra}"
 	
-	# Sync all remaining files
-	
-	sh "s3cmd sync --progress -M --acl-public --recursive --no-mime-magic "+
+	sh "s3cmd sync -M --progress --acl-public --recursive --no-mime-magic "+
+	"--add-header='Content-Encoding:gzip' "+
+	"--add-header='Cache-Control:max-age=86400' "+
 	"_site/ s3://splinesoft.net/ "+
 	"--exclude '*.*' "+
-	"--include '*.png' --include '*.css' --include '*.js' --include '*.txt' --include '*.gif' --include '*.jpg' --include '*.jpeg' "+
+	"--include '*.js' --include '*.css' "+
+	"#{cmd_extra}"
+		
+	sh "s3cmd sync --progress -M --acl-public --recursive --no-mime-magic "+
+	"_site/ s3://splinesoft.net/ "+
+	"--add-header='Cache-Control:max-age=86400' "+
+	"--exclude '*.*' "+
+	"--include '*.png' --include '*.txt' --include '*.gif' --include '*.jpg' --include '*.jpeg' "+
 	"#{cmd_extra}"
 
 end
