@@ -4,3 +4,5 @@ _drafts/
 
 # ignore generated local site
 _site/
+.bundle
+vendor
