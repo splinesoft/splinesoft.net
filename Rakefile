@@ -1,6 +1,5 @@
 task :setup do
 	sh "bundle check --path=vendor/bundle || bundle install --jobs=4 --retry=2 --path=vendor/bundle"
-	sh "npm list write-good || npm install -g write-good"
 end
 
 task :serve do

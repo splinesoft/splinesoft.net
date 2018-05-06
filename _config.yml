@@ -1,7 +1,7 @@
 markdown: rdiscount
 permalink: /:title
 title: splinesoft
-url: http://splinesoft.net
+url: https://splinesoft.net
 images: /img/
 css: /css/
 js: /js/
@@ -12,7 +12,7 @@ exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, Rakefile, circle.yml]
 
 parent:
   name: splinesoft.net
-  url: http://www.splinesoft.net
+  url: https://splinesoft.net
 
 author:
   name: Jonathan Hersh
