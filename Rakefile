@@ -36,6 +36,7 @@ task :publish do
 		
 	sh "s3cmd sync -M --progress --acl-public --recursive --no-mime-magic "+
 	"--add-header='Content-Encoding:gzip' "+
+	"--add-header='Cache-Control:max-age=3600' "+
 	"_site/ s3://splinesoft.net/ "+
 	"--exclude '*.*' "+
 	"--include '*.html' --include '*.xml' "+
@@ -43,7 +44,7 @@ task :publish do
 	
 	sh "s3cmd sync -M --progress --acl-public --recursive --no-mime-magic "+
 	"--add-header='Content-Encoding:gzip' "+
-	"--add-header='Cache-Control:max-age=86400' "+
+	"--add-header='Cache-Control:max-age=3600' "+
 	"_site/ s3://splinesoft.net/ "+
 	"--exclude '*.*' "+
 	"--include '*.js' --include '*.css' "+
@@ -51,7 +52,7 @@ task :publish do
 		
 	sh "s3cmd sync --progress -M --acl-public --recursive --no-mime-magic "+
 	"_site/ s3://splinesoft.net/ "+
-	"--add-header='Cache-Control:max-age=86400' "+
+	"--add-header='Cache-Control:max-age=3600' "+
 	"--exclude '*.*' "+
 	"--include '*.png' --include '*.txt' --include '*.gif' --include '*.jpg' --include '*.jpeg' "+
 	"#{cmd_extra}"
