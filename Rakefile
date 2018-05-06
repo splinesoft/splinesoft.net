@@ -11,7 +11,7 @@ task :build do
 end
 
 task :lint do
-		sh "bundle exec htmlproof --check-favicon --checks-to-ignore HtmlCheck _site"
+		sh "bundle exec htmlproof --check-favicon --checks-to-ignore HtmlCheck --only-4xx _site"
 		puts `write-good *.html`
 end
 
