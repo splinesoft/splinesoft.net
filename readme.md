@@ -1,6 +1,6 @@
 # Splinesoft dot net
 
-[![Circle CI](https://circleci.com/gh/splinesoft/splinesoft.net.svg?style=svg)](https://circleci.com/gh/splinesoft/splinesoft.net)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/splinesoft/splinesoft.net/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/splinesoft/splinesoft.net/tree/master)
 
 Source for [Splinesoft.net](https://splinesoft.net), a purveyor of finely-crafted bits for iPhone and iPad.
 
@@ -22,15 +22,7 @@ jekyll serve --watch
 
 ### Publishing
 
-`rake publish` automates the entire deployment process:
-
-1. Generate the site with Jekyll.
-2. GZip HTML files, which can be served compressed directly from S3 for stupendously fast page load times.
-3. Upload GZip'd files to S3.
-4. Upload remaining files (images, CSS, JS) to S3.
-5. There is no step 5.
-
-Files are uploaded to S3 using [s3cmd](http://s3tools.org/s3cmd), a handy command-line tool for S3.
+The site is deployed to S3 by CircleCI, using [s3cmd](http://s3tools.org/s3cmd), a handy command-line tool for S3.
 
 ### Thanks!
 

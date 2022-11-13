@@ -1,59 +1,42 @@
-version: 2
+version: '2.1'
 
 jobs:
   build:
     docker:
-        - image: circleci/ruby:2.3
+        - image: cimg/ruby:3.1.2
     working_directory: ~/splinesoft.net
     environment:
       - JEKYLL_ENV: "production"
     steps:
       - checkout
-      - restore_cache:
-          key: 1-gems-{{ checksum "Gemfile.lock" }}
-      - run: |
-          sudo apt-get install curl python-software-properties
-          curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-          sudo apt-get install nodejs
-          node -v
-          sudo npm install -g write-good
       - run: rake setup
       - run: rake build
       - run: rake lint
       - persist_to_workspace:
           root: ~/splinesoft.net
           paths: _site
-      - save_cache:
-          key: 1-gems-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
-      
+
   deploy:
     docker:
-        - image: circleci/ruby:2.3
+        - image: cimg/python:3.11.0
     working_directory: ~/splinesoft.net
-    filters:
-      branches:
-        only: master
     steps:
       - checkout
       - run: |
-          sudo apt-get install python-setuptools python-dateutil
-          wget https://github.com/s3tools/s3cmd/releases/download/v1.5.2/s3cmd-1.5.2.tar.gz
-          tar -xzvf s3cmd-1.5.2.tar.gz
-          cd s3cmd-1.5.2 && sudo python setup.py install
+          pip install s3cmd
           s3cmd --version
       - attach_workspace:
           at: ~/splinesoft.net
-      - run: rake publish
-      
+      - run: sh .circleci/publish.sh
+
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - build
       - deploy:
-          requires: 
+          context: Pushover
+          requires:
             - build
           filters:
             branches:

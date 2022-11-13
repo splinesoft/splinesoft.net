@@ -5,10 +5,10 @@ url: https://splinesoft.net
 images: /img/
 css: /css/
 js: /js/
-  
+
 description: Splinesoft - mindful bits for your iPhone and iPad.
 
-exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, Rakefile, circle.yml]
+exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, Rakefile, .circleci]
 
 parent:
   name: splinesoft.net
