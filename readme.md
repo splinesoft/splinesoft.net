@@ -1,6 +1,6 @@
 # Splinesoft dot net
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/splinesoft/splinesoft.net/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/splinesoft/splinesoft.net/tree/master)
+![Action status](https://github.com/splinesoft/splinesoft.net/actions/workflows/splinesoft.yml/badge.svg)
 
 Source for [Splinesoft.net](https://splinesoft.net), a purveyor of finely-crafted bits for iPhone and iPad.
 
