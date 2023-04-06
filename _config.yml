@@ -8,7 +8,7 @@ js: /js/
 
 description: Splinesoft - mindful bits for your iPhone and iPad.
 
-exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, Rakefile, .circleci]
+exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, Rakefile, .github, scripts]
 
 parent:
   name: splinesoft.net
