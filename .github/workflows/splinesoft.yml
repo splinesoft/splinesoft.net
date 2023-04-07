@@ -4,16 +4,11 @@ on:
   push:
     branches: [ "master" ]
 
-env:
-    PUSHOVER_APP: ${{ secrets.pushover_app }}
-    PUSHOVER_USER: ${{ secrets.pushover_user }}
-    SITE_AWS_KEY: ${{ secrets.site_aws_key }}
-    SITE_AWS_SECRET: ${{ secrets.site_aws_secret }}
-    JEKYLL_ENV: production
-
 jobs:
   build:
      runs-on: ubuntu-latest
+     env:
+       JEKYLL_ENV: production
      steps:
      - uses: actions/checkout@v3
      - uses: ruby/setup-ruby@v1
@@ -53,4 +48,9 @@ jobs:
           name: site
           path: _site
       - name: Publish
+        env:
+          PUSHOVER_APP: ${{ secrets.pushover_app }}
+          PUSHOVER_USER: ${{ secrets.pushover_user }}
+          SITE_AWS_KEY: ${{ secrets.site_aws_key }}
+          SITE_AWS_SECRET: ${{ secrets.site_aws_secret }}
         run: scripts/publish.sh
